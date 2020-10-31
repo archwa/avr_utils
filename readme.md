@@ -24,7 +24,7 @@ For the initial programmer:
 
 
 For software and subsequent programming options:
-- Create a custom AVR bootloader that allows for in-circuit serial programming (ICSP) / in-system programming (ISP), probably over USART or similar (cuz I want to be able to just program my microcontroller using my PC's virtual serial port, not like the SPI stuff mentioned above - although I concede that this would make re-programming the bootloader slightly tricker since it would be over-writing itself... maybe a reserved spot in flash or EEPROM to load this? it's possible))
+- Create a custom AVR bootloader that allows for in-system programming (ISP), probably over USART or similar (cuz I want to be able to just program my microcontroller using my PC's virtual serial port, not like the SPI stuff mentioned above - although I concede that this would make re-programming the bootloader slightly tricker since it would be over-writing itself... maybe a reserved spot in flash or EEPROM to load this? it's possible))
   - ...which just means the microcontroller can program itself/modify the flash/EEPROM memories while it is itself running.
   - The goal is to create a bootloader that allows the user to select from: (1) do ISP, (2) run the currently loaded program, (3) modify other stuff (fuse/lock bits, if possible??? and/or standard program size, program offsets, etc. so that multiple programs can be stored on the MCU)), (4) reset, and maybe a few other fun options for boot
 - Maybe an operating system at some point? Lol not much of a point since there isn't much memory/peripherals... but I think it would be a fun adventure!

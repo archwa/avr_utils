@@ -34,7 +34,7 @@ int spi_data_xfer(unsigned int mosi) {
   _delay_ms(pulse_width);
   set_port_data(mosi, 0);
 
-  return PORTB & 0x2; // return MISO data
+  return PINB & 0x2; // return MISO data
 }
 
 int do_spi(unsigned char* data, unsigned int data_len) {
